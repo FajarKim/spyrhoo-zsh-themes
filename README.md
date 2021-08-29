@@ -5,5 +5,5 @@ Tema untuk Oh My Zsh!
 ```shell
 git clone --depth=1 https://github.com/FajarKim/spyrhoo-ohmyzsh-theme ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spyrhoo
 ```
-# Screenshoots
+# Screenshots
 ![Spyrhoo](https://a.top4top.io/p_2067yhqr80.jpg)
