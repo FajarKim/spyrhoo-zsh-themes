@@ -87,7 +87,7 @@ ${BLUE}[${RED}+${BLUE}]${WHITE} Telegram : ${UNDERLINE}${CYAN}https://t.me/Fajar
 ${BLUE}[${RED}+${BLUE}]${WHITE} Instagram: ${UNDERLINE}${CYAN}https://instagram.com/fajarkim_${RESET}${BOLD}
 ${BLUE}[${RED}+${BLUE}]${WHITE} E-Mail   : ${CYAN}fajarrkim@gmail.com${RESET}"
   sleep 1
-  bash -c "env zsh"
+  exec zsh -l
 }
 
 main () {
