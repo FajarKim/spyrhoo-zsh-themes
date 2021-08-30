@@ -25,7 +25,7 @@ prt_error () {
 setup_colors () {
   if [ -t 1 ]; then
         RESET=$(printf "\e[m")
-        ITALIC=
+        ITALIC=$(printf "\e[3m")
         UNDERLINE=$(printf "\e[4m")
         RED=$(printf "\e[31m")
         GREEN=$(printf "\e[32m")
