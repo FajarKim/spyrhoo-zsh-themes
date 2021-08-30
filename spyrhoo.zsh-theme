@@ -118,5 +118,4 @@ $PR_LIGHT_GREEN%_$PR_BLUE)$PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT\
 $PR_CYAN$PR_SHIFT_IN$PR_HBAR$PR_SHIFT_OUT$PR_NO_COLOUR '
 }
 
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd setprompt
+eval setprompt
