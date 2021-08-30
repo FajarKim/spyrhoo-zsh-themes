@@ -54,6 +54,7 @@ setup_theme () {
     prt_error "git clone of spyrhoo-ohmyzsh-theme repo failed!"
     exit 1
   }
+}
 
 setup_zshrc () {
   if [ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spyrhoo/templates ]; then
