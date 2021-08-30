@@ -45,7 +45,6 @@ setup_colors () {
 }
 
 setup_theme () {
-  echo "${GREEN}Setting up themes to .zshrc ...${RESET}"
   command_exists git || {
     prt_error "git is not installed"
     exit 1
@@ -57,10 +56,11 @@ setup_theme () {
   }
 }
 setup_zshrc () {
+  echo "${GREEN}Setting up themes to .zshrc ...${RESET}"
   if [ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spyrhoo/templates ]; then
       cp -r ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spyrhoo/templates/zshrc.templates ~/.zshrc
   else
-      zshrc="https://raw.githubusercontent.com/FajarKim/spyrhoo-ohmyzsh-theme/master/templates/zshrc.templates"
+      zshrc="$(curl -fsSL https://raw.githubusercontent.com/FajarKim/spyrhoo-ohmyzsh-theme/master/templates/zshrc.templates)"
       cat <<EOF > ~/.zshrc
 $zshrc
 EOF
