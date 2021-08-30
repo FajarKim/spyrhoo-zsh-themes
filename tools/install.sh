@@ -25,21 +25,23 @@ prt_error () {
 setup_colors () {
   if [ -t 1 ]; then
         RESET=$(printf "\e[m")
-        ITALIC=$(printf "\e[3m")
         UNDERLINE=$(printf "\e[4m")
         RED=$(printf "\e[31m")
         GREEN=$(printf "\e[32m")
         YELLOW=$(printf "\e[33m")
         BLUE=$(printf "\e[34m")
+        CYAN=$(printf "\e[36m")
+        WHITE=$(printf "\e[37m")
         BOLD=$(printf "\e[1m")
   else
         RESET=""
-        ITALIC=""
         UNDERLINE=""
         RED=""
         GREEN=""
         YELLOW=""
         BLUE=""
+        CYAN=""
+        WHITE=""
         BOLD=""
   fi
 }
@@ -72,6 +74,15 @@ ${GREEN}          ║╚══╣╚═╝╠╗╚╝╔╣╚═╝║╚═�
           ╚══╗║╔══╝╚╗╔╝║╔╗╔╣╔═╗║║ ║║║ ║║
 ${RED}          ║╚═╝║║    ║║ ║║║╚╣║ ║║╚═╝║╚═╝║
           ╚═══╩╝    ╚╝ ╚╝╚═╩╝ ╚╩═══╩═══╝${RESET}"
+  echo "${BOLD}${RED}[${GREEN}+${RED}]${BLUE} Author : ${WHITE}Fajar Kim
+${RED}[${GREEN}+${RED}]${BLUE} Version: ${WHITE}1.10
+
+• ${YELLOW}Contact Person
+${BLUE}[${RED}+${BLUE}]${WHITE} Facebook : ${UNDERLINE}${CYAN}https://bit.ly/fb-fajarkim${RESET}${BOLD}
+${BLUE}[${RED}+${BLUE}]${WHITE} WhatsApp : ${UNDERLINE}${CYAN}https://bit.ly/wa-fajarkim${RESET}${BOLD}
+${BLUE}[${RED}+${BLUE}]${WHITE} Telegram : ${UNDERLINE}${CYAN}https://t.me/FajarThea${RESET}${BOLD}
+${BLUE}[${RED}+${BLUE}]${WHITE} Instagram: ${UNDERLINE}${CYAN}https://instagram.com/fajarkim_${RESET}${BOLD}
+${BLUE}[${RED}+${BLUE}]${WHITE} E-Mail   : ${CYAN}fajarrkim@gmail.com${RESET}"
 }
 
 main () {
