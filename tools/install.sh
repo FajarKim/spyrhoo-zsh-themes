@@ -1,11 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 # This script should be run via curl:
-#   sh -c "$(curl -fsSL https://raw.githubusercontent.com/FajarKim/spyrhoo-ohmyzsh-theme/master/tools/install.sh)"
+#   bash -c "$(curl -fsSL https://raw.githubusercontent.com/FajarKim/spyrhoo-ohmyzsh-theme/master/tools/install.sh)"
 # or via wget:
-#   sh -c "$(wget -qO- https://raw.githubusercontent.com/FajarKim/spyrhoo-ohmyzsh-theme/master/tools/install.sh)"
+#   bash -c "$(wget -qO- https://raw.githubusercontent.com/FajarKim/spyrhoo-ohmyzsh-theme/master/tools/install.sh)"
 # or via fetch:
-#   sh -c "$(fetch -o - https://raw.githubusercontent.com/FajarKim/spyrhoo-ohmyzsh-theme/master/tools/install.sh)"
+#   bash -c "$(fetch -o - https://raw.githubusercontent.com/FajarKim/spyrhoo-ohmyzsh-theme/master/tools/install.sh)"
 
 set -e
 
@@ -45,11 +45,12 @@ setup_colors () {
 }
 
 setup_theme () {
+  echo "${GREEN}Setting up themes to .zshrc ...${RESET}"
   command_exists git || {
     prt_error "git is not installed"
     exit 1
   }
-
+  echo "${BLUE}Cloning Spyrhoo Theme${RESET}"
   git clone --depth=1 https://github.com/FajarKim/spyrhoo-ohmyzsh-theme ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spyrhoo || {
     prt_error "git clone of spyrhoo-ohmyzsh-theme repo failed!"
     exit 1
@@ -63,43 +64,6 @@ setup_zshrc () {
       cat <<EOF > ~/.zshrc
 $zshrc
 EOF
-  fi
-
-  case "$PREFIX" in
-  *com.termux*) termux=true; zsh=zsh;;
-  *) termux=false;;
-  esac
-
-  printf '%sDo you want to change your default shell to zsh? [Y/n]%s ' \
-    "$YELLOW" "$RESET"
-  read -r opt
-  case $opt in
-    y*|Y*|"") echo "Changing the shell..." ;;
-    n*|N*) echo "Shell change skipped."; return ;;
-    *) echo "Invalid choice. Shell change skipped."; return ;;
-  esac
-
-  if [ "$termux" != true ]; then
-    # Test for the right location of the "shells" file
-    if [ -f /etc/shells ]; then
-      shells_file=/etc/shells
-    elif [ -f /usr/share/defaults/etc/shells ]; then # Solus OS
-      shells_file=/usr/share/defaults/etc/shells
-    else
-      ptr_error "could not find /etc/shells file. Change your default shell manually."
-      return
-    fi
-
-    # Get the path to the right zsh binary
-    # 1. Use the most preceding one based on $PATH, then check that it's in the shells file
-    # 2. If that fails, get a zsh path from the shells file, then check it actually exists
-    if ! zsh=$(command -v zsh) || ! grep -qx "$zsh" "$shells_file"; then
-      if ! zsh=$(grep '^/.*/zsh$' "$shells_file" | tail -1) || [ ! -f "$zsh" ]; then
-        ptr_error "no zsh binary found or not present in '$shells_file'"
-        ptr_error "change your default shell manually."
-        return
-      fi
-    fi
   fi
 }
 
