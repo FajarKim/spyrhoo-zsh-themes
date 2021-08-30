@@ -52,12 +52,14 @@ setup_theme () {
     exit 1
   }
   echo "${BLUE}Cloning Spyrhoo Theme${RESET}"
+  sleep 2
   git clone --depth=1 https://github.com/FajarKim/spyrhoo-ohmyzsh-theme ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spyrhoo || {
     prt_error "git clone of spyrhoo-ohmyzsh-theme repo failed!"
     exit 1
   }
 }
 setup_zshrc () {
+  sleep 1
   echo "${GREEN}Setting up themes to .zshrc ...${RESET}"
   if [ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spyrhoo/templates ]; then
       cp -r ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spyrhoo/templates/zshrc.templates ~/.zshrc
@@ -67,6 +69,7 @@ setup_zshrc () {
 $zshrc
 EOF
   fi
+  sleep 2
   echo "
 ${BOLD}${RED}          ╔═══╦═══╦╗  ╔╦═══╦╗ ╔╦═══╦═══╗
           ║╔═╗║╔═╗║╚╗╔╝║╔═╗║║ ║║╔═╗║╔═╗║
@@ -83,6 +86,7 @@ ${BLUE}[${RED}+${BLUE}]${WHITE} WhatsApp : ${UNDERLINE}${CYAN}https://bit.ly/wa-
 ${BLUE}[${RED}+${BLUE}]${WHITE} Telegram : ${UNDERLINE}${CYAN}https://t.me/FajarThea${RESET}${BOLD}
 ${BLUE}[${RED}+${BLUE}]${WHITE} Instagram: ${UNDERLINE}${CYAN}https://instagram.com/fajarkim_${RESET}${BOLD}
 ${BLUE}[${RED}+${BLUE}]${WHITE} E-Mail   : ${CYAN}fajarrkim@gmail.com${RESET}"
+  sleep 1
   bash -c "env zsh"
 }
 
