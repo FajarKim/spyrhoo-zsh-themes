@@ -32,4 +32,4 @@ Jika ada yang ingin ditanyakan mengenai tema ini, silahkan hubungi saya:
 * [Instagram](https://instagram.com/fajarkim_)
 * [E-Mail](mailto:fajarrkim@gmail.com)
 
-*Terima kasih :)*
+**Terima kasih :)**
