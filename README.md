@@ -1,5 +1,6 @@
 # Spyrhoo
 [![Badge Spyrhoo](https://img.shields.io/github/repo-size/FajarKim/spyrhoo-zsh-theme?color=blue&label=Spyrhoo&logo=github&logoColor=green)](https://github.com/FajarKim/spyrhoo-zsh-theme)
+
 Tema untuk Oh My Zsh!
 
 # Install Tema
