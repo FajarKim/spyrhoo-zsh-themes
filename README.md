@@ -31,3 +31,5 @@ Jika ada yang ingin ditanyakan mengenai tema ini, silahkan hubungi saya:
 * [Facebook](https://bit.ly/fb-fajarkim)
 * [Instagram](https://instagram.com/fajarkim_)
 * [E-Mail](mailto:fajarrkim@gmail.com)
+
+*Terima kasih :)*
