@@ -22,4 +22,4 @@ git clone --depth=1 https://github.com/FajarKim/spyrhoo-zsh-theme ${ZSH_CUSTOM:-
 Setelah itu, kalian edit file `.zshrc` di directori `$HOME` dengan `ZSH_THEME="robbyrussell"` menjadi `ZSH_THEME="spyrhoo/spyrhoo"`.
 
 # Screenshots
-![Spyrhoo](https://a.top4top.io/p_2067yhqr80.jpg)
+![Spyrhoo](https://b.top4top.io/p_20736cyt40.png)
