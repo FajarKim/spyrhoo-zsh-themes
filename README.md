@@ -30,4 +30,4 @@ Jika ada yang ingin ditanyakan mengenai tema ini, silahkan hubungi saya:
 * [Telegram](https://t.me/FajarThea)
 * [Facebook](https://bit.ly/fb-fajarkim)
 * [Instagram](https://instagram.com/fajarkim_)
-* [E-Mail](mail-to: fajarrkim@gmail.com)
+* [E-Mail](mailto:fajarrkim@gmail.com)
