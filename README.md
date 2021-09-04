@@ -6,6 +6,8 @@ Tema untuk Oh My Zsh!
 Kalian install dulu package git nya. Lalu dilanjutkan dengan mengetikkan:
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/FajarKim/spyrhoo-zsh-theme/master/tools/install.sh)"
+```
+
 ### • Cara 2
 Kalian harus menginstall terlebih dahulu script [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), dengan mengetikkan
 ```shell
