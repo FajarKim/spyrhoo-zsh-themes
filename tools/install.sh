@@ -266,11 +266,13 @@ setup_theme() {
   echo "${BOLD}${GREEN}Setting up theme Spyrhoo to .zshrc ...${RESET}"
   if [ -d ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spyrhoo/templates ]; then
 	cp -r ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spyrhoo/templates/zshrc.templates $HOME/.zshrc
+	sed -i "s/ZSH=\$HOME/ZSH=$HOME/g" ~/.zshrc >/dev/null 2>&1
   else
 	zshrc="$(curl -fsSL https://raw.githubusercontent.com/FajarKim/spyrhoo-ohmyzsh-theme/master/templates/zshrc.templates)"
 	cat <<EOF > ~/.zshrc
 $zshrc
 EOF
+	sed -i "s/ZSH=\$HOME/ZSH=$HOME/g" ~/.zshrc >/dev/null 2>&1
   fi
   sleep 1
   echo "
