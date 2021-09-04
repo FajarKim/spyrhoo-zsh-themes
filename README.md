@@ -23,3 +23,11 @@ Setelah itu, kalian edit file `.zshrc` di directori `$HOME` dengan `ZSH_THEME="r
 
 # Screenshots
 ![Spyrhoo](https://b.top4top.io/p_20736cyt40.png)
+
+# Contact Person
+Jika ada yang ingin ditanyakan mengenai tema ini, silahkan hubungi saya:
+* [WhatsApp](https://wa.me/6285294315884)
+* [Telegram](https://t.me/FajarThea)
+* [Facebook](https://bit.ly/fb-fajarkim)
+* [Instagram](https://instagram.com/fajarkim_)
+* [E-Mail](mail-to: fajarrkim@gmail.com)
