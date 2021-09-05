@@ -1,3 +1,4 @@
+![Logo](https://l.top4top.io/p_2074ushs80.png)
 # Spyrhoo
 [![Badge Spyrhoo](https://img.shields.io/github/repo-size/FajarKim/spyrhoo-zsh-theme?color=blue&label=Spyrhoo&logo=github&logoColor=green)](https://github.com/FajarKim/spyrhoo-zsh-theme)
 
