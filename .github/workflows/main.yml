@@ -23,7 +23,3 @@ jobs:
       - name: Install zsh
         if: runner.os == 'Linux'
         run: sudo apt-get upgrade; sudo apt-get install zsh -y
-      - name: Test installing
-        run: bash ./tools/install.sh
-      - name: Check string
-        run: zsh -n ./spyrhoo.zsh-theme
